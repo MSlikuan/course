@@ -1,10 +1,10 @@
-package com.muzi.course;
+package com.muzi.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CourseApplicationTests {
+class EurekaApplicationTests {
 
     @Test
     void contextLoads() {
