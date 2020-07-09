@@ -1,5 +1,6 @@
-package com.myzi.system;
+package com.muzi.server;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -9,15 +10,16 @@ import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class SystemApplication {
-    private static final Logger LOG = LoggerFactory.getLogger(SystemApplication.class);
+@MapperScan(value = "com.muzi.server.mapper")
+public class ServerApplication {
+    private static final Logger LOG = LoggerFactory.getLogger(ServerApplication.class);
 
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(SystemApplication.class);
+        SpringApplication app = new SpringApplication(ServerApplication.class);
         Environment env = app.run(args).getEnvironment();
         LOG.info("启动成功！！");
-        LOG.info("System地址: \thttp://127.0.0.1:{}", env.getProperty("server.port"));
+        LOG.info("server地址: \thttp://127.0.0.1:{}", env.getProperty("server.port"));
     }
 
 
