@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan(value = "com.muzi.server.mapper")
+@MapperScan("com.muzi.server.mapper")
 public class ServerApplication {
     private static final Logger LOG = LoggerFactory.getLogger(ServerApplication.class);
 
