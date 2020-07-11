@@ -15,7 +15,7 @@ public class TestService {
     @Resource
     TestMapper testMapper;
 
-     List<Test>  list(){
+    public List<Test> list() {
          TestExample testExample = new TestExample();
          testExample.createCriteria().andIdEqualTo(1);
          testExample.setOrderByClause("id desc");
