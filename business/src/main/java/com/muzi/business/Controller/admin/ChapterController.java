@@ -1,5 +1,6 @@
-package com.muzi.business.Controller;
+package com.muzi.business.Controller.admin;
 
+import com.muzi.server.dto.ChapterDTO;
 import com.muzi.server.entity.Chapter;
 import com.muzi.server.service.ChapterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class ChapterController {
     private ChapterService chapterService;
 
     @RequestMapping("/chapter")
-    public List<Chapter> test() {
+    public List<ChapterDTO> test() {
         return chapterService.list();
     }
 
